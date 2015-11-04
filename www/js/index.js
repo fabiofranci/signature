@@ -32,9 +32,10 @@ $(document).ready(function() {
 });
 
 function onDeviceReady() {
-    alert("Pronta la app");
-    if($('#fcmsig').find('.jSignature').length == 0){
-        $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
-    }
-
+    $(document).on("pagebeforeshow","#home",function(){
+        if($('#fcmsig').find('.jSignature').length == 0){
+            $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
+        }
+        $(this).trigger("pagecreate");
+    });
 }
