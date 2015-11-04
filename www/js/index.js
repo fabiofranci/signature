@@ -33,4 +33,8 @@ $(document).ready(function() {
 
 function onDeviceReady() {
     alert("Pronta la app");
+    if($('#fcmsig').find('.jSignature').length == 0){
+        $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
+    }
+
 }
