@@ -32,10 +32,6 @@ $(document).ready(function() {
 });
 
 function onDeviceReady() {
-    $(document).on("pagebeforeshow","#home",function(){
-        if($('#fcmsig').find('.jSignature').length == 0){
-            $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
-        }
-        $(this).trigger("pagecreate");
-    });
+    alert("pronto");
+    $("#signature").jSignature({color:"#00f",lineWidth:5});
 }
