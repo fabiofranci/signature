@@ -41,15 +41,172 @@
             <h1>Signature</h1>
         </div>
         <div data-role="content" role="main">
-                <h3>Nome e Firma Cliente</h3>
-                    <h4>Firma per il Cliente:</h4>
-                    <input type="text" id="nome_cliente_firma" name="nome_cliente_firma"/><br/>
-                    <div id="parentsignature" style="overflow:hidden;color:darkblue;background-color:lightgrey;margin-bottom:10px; padding: 5px;max-size: 340px;">
-                        <div id="fcmsig" style="height:padding: 0 0 0 0;margin: 0 0 0 0;border: 2px dotted #000;width: 100%;"></div>
-                    </div>
-                    <input data-theme="a" class="ui-btn-left" type="button" value="Correggi Firma" onclick="$('#fcmsig').jSignature('clear')"/>
+            <button id="FINE_VISITA" data-icon="flat-checkround" data-theme="d">FINE VISITA</button>
         </div>
     </div>
     <!--// (f) pagina principale -->
+
+    <!-- (i) fine visita -->
+    <div data-role="page" id="fine_visita">
+        <div data-role="header" >
+            <h1>Certificato</h1>
+        </div>
+        <div data-role="content" role="main">
+            <form id="finevisitaFORM" name="finevisitaFORM">
+                <fieldset data-role="collapsible">
+                    <legend>Aree e Normativa</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c1a" id="c1a" class="custom" />
+                        <label for="c1a">Aree Industriali</label>
+
+                        <input type="checkbox" name="c2a" id="c2a" class="custom" />
+                        <label for="c2a">Aree Condominiali</label>
+
+                        <input type="checkbox" name="c3a" id="c3a" class="custom" />
+                        <label for="c3a">Comm. Pubblici</label>
+
+                        <input type="checkbox" name="c4a" id="c4a" class="custom" />
+                        <label for="c4a">D.Lgs 81/08</label>
+
+                        <input type="checkbox" name="c5a" id="c5a" class="custom" />
+                        <label for="c5a">Reg.C.E 852/04</label>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>Servizio</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c1b" id="c1b" class="custom" />
+                        <label for="c1b">Disinfestazione</label>
+
+                        <input type="checkbox" name="c2b" id="c2b" class="custom" />
+                        <label for="c2b">Derattizzazione</label>
+
+                        <input type="checkbox" name="c3b" id="c3b" class="custom" />
+                        <label for="c3b">Disinfezione</label>
+
+                        <input type="checkbox" name="c4b" id="c4b" class="custom" />
+                        <label for="c4b">Tratt. Fitoiatrici</label>
+
+                        <input type="checkbox" name="c5b" id="c5b" class="custom" />
+                        <label for="c5b">Antipiccioni</label>
+
+                        <input type="checkbox" name="c6b" id="c6b" class="custom" />
+                        <label for="c6b">Diserbo</label>
+
+                        <input type="checkbox" name="c7b" id="c7b" class="custom" />
+                        <label for="c7b">Monitoraggio</label>
+
+                        <input type="checkbox" name="c8b" id="c8b" class="custom" />
+                        <label for="c8b">Igienizzazione</label>
+
+                        <input type="checkbox" name="c9b" id="c9b" class="custom" />
+                        <label for="c9b">Altro</label>
+
+                        <input type="checkbox" name="c10b" id="c10b" class="custom" />
+                        <label for="c10b">Pacchetto Igiene e Salubrità come da Contratto</label>
+
+                        <input type="checkbox" name="c11b" id="c11b" class="custom" />
+                        <label for="c11b">Area Interna</label>
+
+                        <input type="checkbox" name="c12b" id="c12b" class="custom" />
+                        <label for="c12b">Area Esterna</label>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>Target</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c13b" id="c13b" class="custom" />
+                        <label for="c13b">Roditori</label>
+
+                        <input type="checkbox" name="c14b" id="c14b" class="custom" />
+                        <label for="c14b">Ins. Striscianti</label>
+
+                        <input type="checkbox" name="c15b" id="c15b" class="custom" />
+                        <label for="c15b">Ins. Volanti</label>
+
+                        <input type="checkbox" name="c16b" id="c16b" class="custom" />
+                        <label for="c16b">Cimex</label>
+
+                        <input type="checkbox" name="c17b" id="c17b" class="custom" />
+                        <label for="c17b">Tarme</label>
+
+                        <input type="checkbox" name="c18b" id="c18b" class="custom" />
+                        <label for="c18b">Altro: </label>
+                        <label for="c18btesto">Specificare: </label>
+                        <input type="text" name="c18btesto" id="c18btesto"/>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>L/A</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c1c" id="c1c" class="custom" />
+                        <label for="c1c">Antilarvale</label>
+
+                        <input type="checkbox" name="c2c" id="c2c" class="custom" />
+                        <label for="c2c">Adulticida</label>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>Tipo di Insetto</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c1d" id="c1d" class="custom" />
+                        <label for="c1d">Blattoidei</label>
+                        <input type="checkbox" name="c2d" id="c2d" class="custom" />
+                        <label for="c2d">Emitteri</label>
+                        <input type="checkbox" name="c3d" id="c3d" class="custom" />
+                        <label for="c3d">Dittere</label>
+                        <input type="checkbox" name="c4d" id="c4d" class="custom" />
+                        <label for="c4d">Muscidi</label>
+                        <input type="checkbox" name="c5d" id="c5d" class="custom" />
+                        <label for="c5d">Imenotteri</label>
+
+                        <input type="checkbox" name="c6d" id="c6d" class="custom" />
+                        <label for="c6d">Altro: </label>
+                        <label for="c6dtesto">Specificare: </label>
+                        <input type="text" name="c6dtesto" id="c6dtesto"/>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>Coformulati</legend>
+                    <div data-role="controlgroup">
+                        <input type="checkbox" name="c1e" id="c1e" class="custom" />
+                        <label for="c1e">Rodenticida</label>
+                        <input type="checkbox" name="c2e" id="c2e" class="custom" />
+                        <label for="c2e">Organofosforici</label>
+                        <input type="checkbox" name="c3e" id="c3e" class="custom" />
+                        <label for="c3e">Piretroidi</label>
+                        <input type="checkbox" name="c4e" id="c4e" class="custom" />
+                        <label for="c4e">Carbammati</label>
+                        <input type="checkbox" name="c6e" id="c6e" class="custom" />
+                        <label for="c6e">Altro: </label>
+                        <label for="c7etesto">Specificare principio attivo: </label>
+                        <input type="text" name="c7etesto" id="c7etesto"/>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset data-role="collapsible">
+                    <legend>Eventuali azioni correttive da intraprendere e/o consigliare</legend>
+                    <textarea id="azioni_correttive" name="azioni_correttive"></textarea>
+                </fieldset>
+                <br/>
+                <h3>Nome e Firma Cliente</h3>
+                <h4>Firma per il Cliente:</h4>
+                <input type="text" id="nome_cliente_firma" name="nome_cliente_firma"/><br/>
+                <div id="parentsignature" style="overflow:hidden;color:darkblue;background-color:lightgrey;margin-bottom:10px; padding: 5px;max-size: 340px;">
+                    <div id="fcmsig" style="height:padding: 0 0 0 0;margin: 0 0 0 0;border: 2px dotted #000;width: 100%;"></div>
+                </div>
+                <input data-theme="a" class="ui-btn-left" type="button" value="Correggi Firma" onclick="$('#fcmsig').jSignature('clear')"/>
+                <div class="ui-block-a"><input type="submit" name="FINEVISITA-SALVA" id="FINEVISITA-SALVA" value="SALVA E INVIA CERTIFICATO" class="btn" data-theme="b"/></div>
+            </form>
+            <div id="signature1"></div>
+        </div>
+    </div>
+    <!-- (f) fine_visita -->
+
     </body>
 </html>

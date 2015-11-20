@@ -33,5 +33,13 @@ $(document).ready(function() {
 
 function onDeviceReady() {
     alert("Ci siamo");
-            $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
+    $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
+
+    $("#FINE_VISITA").on('click',function(){
+        alert("OK! Tutte le postazioni sono state visitate! Compila il modulo del certificato!");
+        //devo fare l'update su visite e poi chiamare genera certificati
+        location.href="#fine_visita";
+    });
+
+
 }
