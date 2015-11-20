@@ -32,6 +32,5 @@ $(document).ready(function() {
 });
 
 function onDeviceReady() {
-    alert("pronto");
-    $("#signature").jSignature({color:"#00f",lineWidth:5});
+            $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
 }
