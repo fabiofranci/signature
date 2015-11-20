@@ -32,5 +32,6 @@ $(document).ready(function() {
 });
 
 function onDeviceReady() {
+    alert("Ci siamo");
             $('#fcmsig').jSignature({'UndoButton':false,color:"#000000",lineWidth:1});
 }
